@@ -1,20 +1,20 @@
 {
-	"product": [
+	"products": [
 		{
-			"name": "Prashant Sahni",
-			"title": "Associate Consultant"
+			"name": "HTC",
+			"src": "img/htc.jpg"
 		},
 		{
-			"name": "Pankaj",
-			"title": "Technical Architect"
+			"name": "IPHONE",
+			"src": "img/iphone.jpg"
 		},
 		{
-			"name": "Ashish",
-			"title": "Associate Consultant"
+			"name": "one-plus3T",
+			"src": "img/one-plus3T.jpg"
 		},
 		{
-			"name": "Diljon",
-			"title": "Senior Software Engg."
+			"name": "samsung-edge",
+			"src": "img/samsung-edge.jpg"
 		}
 	]
 }
