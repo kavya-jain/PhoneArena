@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+		<style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+	* {box-sizing:border-box}
+  </style>	
+	</head>
+	
+    <body>		
+		<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Shopping Cart</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Cart</a></li>
+        <li><a href="#">Favourities</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+		
+		<div id="wrapper" class="container">	
+			<div style="font-family:courier; font-size:160%; text-align:center">
+            <b>LENOVO Z2 PLUS</b>
+			<br>
+			<br>
+            <div>
+                <img src="img/lenovoZ2_1.jpg" id="main_img" style="float: left; width: 354px; height: 390px"/>
+            </div>
+            <div >
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <img src="img/lenovoZ2_1.jpg" style="width: 180px; height: 130px" onmouseover="hover(1);"/><br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <img src="img/lenovoZ2_2.jpg" alt="" style="width: 180px; height: 130px" onmouseover="hover(2);"/>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                 <br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <img src="img/lenovoZ2_3.jpg" alt="" style="width: 180px; height: 130px" onmouseover="hover(3);"/>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			</div>
+			<select>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="grey">Grey</option>
+            </select>
+			
+                <br>                
+            <br>
+            <p style="font-family:verdana; font-size:70%; text-align:center">
+                <button type="submit" id="btn_fav" name="add to favourites" onclick="addToFav()" style="width: 100px; height: 50px">Add to Favourities</button>
+                <button type="submit" id="btn_cart" name="add to cart" onclick="addToCart()" style="width: 100px; height: 50px">Add to Cart</button>
+            </p>
+            <div style="font-family:verdana; font-size:70%; text-align:left">
+               <b><ins>GENERAL</ins></b><br><br>
+			   <table width="100%" cellspacing="0" cellpadding="0" style="border: none;"><tbody>
+			   <tr class="firstrow">
+			   <td width="50%">Release date</td>
+			   <td width="50%"><span itemprop="releaseDate">September 2016</span></td></tr>
+			   <tr class=""><td width="50%">Form factor</td><td width="50%">Touchscreen</td></tr>
+			   <tr class="">
+			   <td width="50%">Dimensions (mm)</td>
+			   <td width="50%"><span itemprop="height">141.65 </span> x 
+			   <span temprop="width"> 68.88 </span> x <span itemprop="depth"> 8.45</span></td></tr><tr class=""><td 
+				width="50%">Weight (g)</td><td width="50%">149.00</td></tr><tr class=""><td width="50%">Battery capacity 
+				(mAh)</td><td width="50%">3500</td></tr><tr class=""><td width="50%">Removable battery</td><td 
+				width="50%">No</td></tr><tr class=""><td width="50%">Colours</td><td width="50%">White, Black</td></tr><tr 
+				class=""><td width="50%">SAR value</td><td width="50%">0.71</td></tr></tbody></table>
+            </div><br>
+			
+			<div style="font-family:verdana; font-size:70%; text-align:left">
+             <b><ins>DISPLAY</ins></b><br><br>  
+			   <table width="100%" cellspacing="0" cellpadding="0" style="border: none;"><tbody>
+			   <tr class="firstrow"><td width="50%">Screen size (inches)</td>
+			   <td width="50%">5.00</td></tr>
+			   <tr class="">
+			   <td width="50%">Touchscreen</td>
+			   <td width="50%">Yes</td></tr>
+			   <tr class=""><td width="50%">Resolution</td>
+			   <td width="50%">1080x1920 pixels</td></tr><tr class=""><td width="50%">Pixels per inch (PPI)</td>
+			   <td width="50%">441</td></tr></tbody>
+			</table></div><br>
+			<div style="font-family:verdana; font-size:70%; text-align:left">
+				<b><ins>CAMERA</ins></b><br><br>  
+				<table width="100%" cellspacing="0" cellpadding="0" style="border: none;"><tbody><tr class="firstrow"><td width="50%">Rear camera</td><td width="50%">13-megapixel</td></tr><tr class=""><td width="50%">Flash</td><td width="50%">Yes</td></tr><tr class=""><td width="50%">Front camera</td><td width="50%">8-megapixel</td></tr></tbody></table>
+        </div>
+		<script src="themes/js/common.js"></script>
+		<script>
+			$(function () {
+				$('#myTab a:first').tab('show');
+				$('#myTab a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+			})
+			$(document).ready(function() {
+				$('.thumbnail').fancybox({
+					openEffect  : 'none',
+					closeEffect : 'none'
+				});
+				
+				$('#myCarousel-2').carousel({
+                    interval: 2500
+                });								
+			});
+			
+			function hover(a)
+            {
+              
+       	    main_img.setAttribute('src', ""); 
+		var img=document.getElementById("main_img");
+                if(a==1)
+                {
+                    main_img.setAttribute('src', "img/lenovoZ2_1.jpg");
+                }
+                else if(a==2)
+                {
+                    main_img.setAttribute('src', "img/lenovoZ2_2.jpg");
+                }
+                else if(a==3)
+                    main_img.setAttribute('src', "img/lenovoZ2_3.jpg");
+            }
+		</script>
+		<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+    </body>
+</html>
