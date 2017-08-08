@@ -1,20 +1,46 @@
 {
-	"products": [
-		{
-			"name": "HTC",
-			"src": "img/htc.jpg"
-		},
-		{
-			"name": "IPHONE",
-			"src": "img/iphone.jpg"
-		},
-		{
-			"name": "one-plus3T",
-			"src": "img/one-plus3T.jpg"
-		},
-		{
-			"name": "samsung-edge",
-			"src": "img/samsung-edge.jpg"
-		}
-	]
+    "products": [
+                  {
+                    "id": "p001",
+                    "name": "lenovo z2",
+                    "price": "15000",
+                    "quantity": "2",
+		    "src": "img/lenovoZ2_1.jpg"
+                  },
+                  {
+                    "id": "p002",
+                    "name": "moto g5",
+                    "price": "25000",
+                    "quantity": "4",
+		    "src": "img/motoG5_1.jpg"
+                  },
+                  {
+                    "id": "p003",
+                    "name": "mi note4",
+                    "price": "13000",
+                    "quantity": "5",
+	 	    "src": "img/miNote4_1.jpg"
+                  },
+                  {
+                    "id": "p004",
+                    "name": "one-plus3T",
+                    "price": "30000",
+                    "quantity": "2",
+		    "src": "img/one-plus3T.jpg"
+                  },
+                  {
+                    "id": "p005",
+                    "name": "HTC",
+                    "price": "57000",
+                    "quantity": "3",
+	 	    "src": "img/htc.jpg"
+                  },
+                  {
+                    "id": "p006",
+                    "name": "i phone7",
+                    "price": "70000",
+                    "quantity": "4",
+		    "src": "img/iphone.jpg"
+                  }
+                ]
 }
