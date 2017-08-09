@@ -22,16 +22,17 @@
   </style>
   <script>
 
-var AddFav=new Array();
+var AddFav=[];
 window.onload = function () {
 //var hasCodeRunBefore=localStorage()
 alert("hi");
     if (sessionStorage.getItem("hasCodeRunBefore") === null) {
-        AddFav=[];
+        AddFav.length=0;
 		alert("hello");
         sessionStorage.setItem("hasCodeRunBefore", true);
 		//localStorage["AddedFav"]=JSON.stringify(AddFav));
 		sessionStorage.setItem("AddedFav", JSON.stringify(AddFav));
+		//alert(AddFav);
     }
 	
 }
