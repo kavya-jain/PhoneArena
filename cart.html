@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+  <script>
+  window.onload=function(){alert('hi');
+  var cart=JSON.parse(sessionStorage.getItem("AddedCart"));		//'['+ sessionStorage.getItem("AddedFav")+ ']'
+  var request = new XMLHttpRequest();
+alert(cart);
+  request.open('GET', 'products.json');
+  request.send();
+
+  request.onreadystatechange = function() {
+   
+	//alert("--hi--");
+    if( request.readyState == 4) {
+      if( request.status >= 200 && request.status ) {
+        console.log(request);
+        var data = JSON.parse(request.responseText);
+        var products = data.products;
+      
+		var len1 = cart.length;
+		alert(len1);
+		var len2 = products.length;
+		//alert(len2);
+		var name = [];
+		var price=[];
+		var imag=[];
+		for (i = 0; i < len1; i++) {
+			for(j=0; j < len2; j++){
+			
+        if (products[j] && products[j].id == cart[i]) {
+             name.push(products[j].name);
+			 price.push(products[j].price);
+			 imag.push(products[j].src);
+			// main_img.setAttribute('src', imag);
+			 
+			} 
+        }// alert(fav[i]);
+    }
+	
+	for(i=0; i<len1; i++){alert("---"+name[i]);}
+	alert(price);
+	}}
+	var sum=0;
+	var table = document.getElementById("myTable");
+	for(i = 0; i < len1; i++)
+	{
+		//alert(i);
+		var row = table.insertRow(i+1);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		var cell4 = row.insertCell(3);
+		var cell5 = row.insertCell(4);
+		cell1.innerHTML = "<input id=\""+i+"\"type=\"checkbox\" value=\"option1\"  onchange=\"remCart(this.id)\"/>";
+		cell2.innerHTML = "<img src=\""+imag[i]+"\" style=\"width:30px; height:30px\"/>";
+		cell3.innerHTML = name[i];
+		cell4.innerHTML = price[i];
+		cell5.innerHTML = "&nbsp";	
+		sum+=parseInt(price[i]);
+	}
+	cell5.innerHTML=sum;
+  }
+}
+	function remCart(i)
+	{
+		document.getElementById("myTable").deleteRow(i+1);
+	}
+ </script>
+ 
+ <body style="margin-left:20px">		
+		<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="akku.html">Shopping Cart</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="akku.html">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Cart</a></li>
+        <li><a href="favourites.html">Favourities</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="main-content">				
+				<div class="row">
+					<div class="span9">					
+						<h4 class="title"><span class="text"><strong>Your</strong> Favourities</span></h4>
+						<table class="table table-striped" id="myTable">
+							<thead>
+								<tr>
+									<th>Remove</th>
+									<th>Image</th>
+									<th>Product Name</th>
+									<th>Unit Price</th>
+									<th>Total</th>
+								</tr>
+							</thead>
+							<tbody>
+									  
+							</tbody>
+						</table>
+						<p class="buttons center">				
+							<button class="btn" type="button" id="chkout">Checkout</button>
+						</p>					
+					</div>
+					
+		<script src="themes/js/common.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#checkout').click(function (e) {
+					document.location.href = "checkout.html";
+				})
+			});
+		</script>		
+    </body>
+</html>
