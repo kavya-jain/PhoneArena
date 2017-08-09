@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+  <script>
+  
+  var request = new XMLHttpRequest();
+
+  request.open('GET', 'products.json');
+  request.send();
+
+  request.onreadystatechange = function() {
+   
+
+    if( request.readyState == 4) {
+      if( request.status >= 200 && request.status ) {
+        console.log(request);
+        var data = JSON.parse(request.responseText);
+        var products = data.products;
+      
+		var len = products.length;
+		var name = [];
+		for (i = 0; i < len; i++) {
+        if (products[i] && products[i].id == phone) {
+             name.push("<br>"+products[i].name+"</br>");
+			 sc1=products[i].src;sc2=products[i].src1;sc3=products[i].src2;
+			 main_img.setAttribute('src', sc1);
+			 p1.setAttribute('src', sc1);
+			 p2.setAttribute('src', sc2);
+			 p3.setAttribute('src', sc3);
+			 id=products[i].id;
+			 name1=products[i].name;
+			 price=products[i].price;
+			 imag=products[i].src;
+			 
+        }
+    }
+	document.getElementById('name').innerHTML =name;
+       
+	   
+      }
+    }
+  }
