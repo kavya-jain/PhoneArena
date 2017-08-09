@@ -26,7 +26,7 @@ var request = new XMLHttpRequest();
 
   request.open('GET', 'products.json');
   request.send();
-  var name1, id, price, imag;
+ // var name1, id, price, imag;
   
     request.onreadystatechange = function() {
    
@@ -47,10 +47,10 @@ var request = new XMLHttpRequest();
 			 p1.setAttribute('src', sc1);
 			 p2.setAttribute('src', sc2);
 			 p3.setAttribute('src', sc3);
-			 id=products[i].id;
+			/* id=products[i].id;
 			 name1=products[i].name;
 			 price=products[i].price;
-			 imag=products[i].src;
+			 imag=products[i].src;*/
 			 
         }
     }
@@ -81,7 +81,7 @@ var request = new XMLHttpRequest();
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Cart</a></li>
-        <li><a href="#">Favourities</a></li>
+        <li><a href="favourites.html">Favourities</a></li>
       </ul>
     </div>
   </div>
@@ -193,8 +193,7 @@ var request = new XMLHttpRequest();
 			function addToFav()
 			{
 				//alert(phone);
-				var AddedFav=[];
-				AddedFav=JSON.parse('['+ sessionStorage.getItem("AddedFav")+ ']');
+				var AddedFav=JSON.parse(sessionStorage.getItem("AddedFav"));
 				//alert(AddedFav.length);
 				//alert(AddedFav);
 				AddedFav.push(phone);
