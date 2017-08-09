@@ -202,7 +202,13 @@ var request = new XMLHttpRequest();
 				//alert(AddedFavs);
 			}
 			
-			
+			function addToCart()
+			{
+				var AddedCart=[];
+				AddedCart=JSON.parse(sessionStorage.getItem("AddedCart"));
+				AddedCart.push(phone);
+				sessionStorage.setItem("AddedCart",JSON.stringify(AddedCart));
+			}			
 		</script>
 		<footer class="container-fluid text-center">
   <p>Footer Text</p>
